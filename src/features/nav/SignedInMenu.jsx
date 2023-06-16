@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
-import { Menu, Button,Image,Dropdown } from 'semantic-ui-react'
+import { Menu,Image,Dropdown } from 'semantic-ui-react'
 
 const SignedInMenu = ({setAuthenticated}) => {
     return (
