@@ -7,6 +7,7 @@ import { Route } from "react-router-dom/cjs/react-router-dom";
 import HomePage from "../../features/home/HomePage";
 import EventDetailedPage from "../../features/events/eventDetailed/EventDetailedPage";
 import EventForm from "../../features/events/eventForm/EventForm";
+import SnadBox from "../../features/sendbox/SnadBox";
 //Adding Comment
 
 
@@ -22,6 +23,7 @@ function App() {
           <NavBar />
           <Container className="main">
             <Route exact path='/events' component={EventDashboard} />
+            <Route exact path='/sandbox' component={SnadBox} />
             <Route path='/events/:id' component={EventDetailedPage} />
             <Route path={['/createEvent','/manage/:id']} component={EventForm} />
           </Container>
