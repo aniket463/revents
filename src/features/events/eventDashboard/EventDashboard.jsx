@@ -6,15 +6,13 @@ import { useSelector } from "react-redux";
 export const EventDashboard = () => {
 
   const {events} = useSelector(state=>state.event)
-  const handleDeleteEvent = (eventId) =>{
-    // setEvents(events.filter(evt => evt.id !== eventId))
-  }
+ 
 
 
   return (
     <Grid>
       <Grid.Column width={10}>
-        <EventList events={events}  deleteEvent={handleDeleteEvent}/>
+        <EventList events={events}/>
       </Grid.Column>
       <Grid.Column width={6}>
       <h2>Evnet Filter</h2>
