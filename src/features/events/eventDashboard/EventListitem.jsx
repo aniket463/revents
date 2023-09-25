@@ -1,12 +1,13 @@
 import React from 'react'
 import { Item, Segment, Icon, List, Button } from 'semantic-ui-react'
 import EventListAttendee from './EventListAttendee'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import {deleteEvent} from "../eventAction"
+import { deleteEvent } from "../eventAction"
+import { format } from 'date-fns'
 
 
-function EventListitem({ event}) {
+function EventListitem({ event }) {
     const dispatch = useDispatch();
 
     return (
@@ -27,7 +28,7 @@ function EventListitem({ event}) {
 
             <Segment>
                 <span>
-                    <Icon name='clock' />{event.date}
+                    <Icon name='clock' />{format(event.date,'MMMM d, yyyy h:mm a') }
                     <Icon name='marker' />{event.venue}
                 </span>
             </Segment>
