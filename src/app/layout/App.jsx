@@ -9,6 +9,7 @@ import EventDetailedPage from "../../features/events/eventDetailed/EventDetailed
 import EventForm from "../../features/events/eventForm/EventForm";
 import SnadBox from "../../features/sendbox/SnadBox";
 import ModalManager from "../common/modals/ModalManager";
+import { ToastContainer } from "react-toastify";
 
 //Adding Comment
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <ModalManager />
+      <ToastContainer theme="colored" position="bottom-right" hideProgressBar />
       <Route exact path='/' component={HomePage} />
       <Route path={'/(.+)'} render={() => (
         <>
